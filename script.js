@@ -145,24 +145,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    //  Sélectionne l'élément                    class=carreVert
+    // Sélectionne l'élément avec la classe "carreVert".
     const carreVert = document.querySelector('.carreVert');
-    
-    //  Initialise la position de déplacement
     let positionX = 0;
+    // Initialise la visibilité à false.
+    let visible = false; 
 
-    //  Ajoute un événement pour détecter le scroll de la souris.
-    window.addEventListener('wheel', (deplacement) => {
-        //  Vérifie la direction du scroll.
-        if (deplacement.deltaY < 0) {
-            //  Scroll vers le haut : déplace vers la droite.
-            positionX += 40;
-        } else if (deplacement.deltaY > 0) {
-            //  Scroll vers le bas : déplace vers la gauche.
-            positionX -= 40;
+    // Fonction pour déplacer le carré
+    const deplacerCarre = (deplacement) => {
+        if (visible) { // Ne déplace le carré que s'il est visible.
+            if (deplacement.deltaY < 0) {
+                // Scroll vers le haut : déplace vers la droite.
+                positionX += 40;
+            } else if (deplacement.deltaY > 0) {
+                // Scroll vers le bas : déplace vers la gauche.
+                positionX -= 40;
+            }
+            carreVert.style.transform = `translateX(${positionX}px)`;
         }
-        
-        //  Applique la transformation au carré
-        carreVert.style.transform = `translateX(${positionX}px)`;
+    };
+
+    // Crée un observer pour vérifier la visibilité du carré.
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Met à jour la visibilité
+            visible = entry.isIntersecting; 
+        });
     });
+
+    // Observe le carré pour détecter s'il est dans le viewport.
+    observer.observe(carreVert);
+
+    // Ajoute l'événement de défilement sur la fenêtre.
+    window.addEventListener('wheel', deplacerCarre);
 });
