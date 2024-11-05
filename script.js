@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const enlargedImg = document.createElement('img');
             enlargedImg.src = image.src;
             enlargedImg.alt = image.alt;
-            enlargedImg.style.maxWidth = '60%';
+            enlargedImg.style.maxWidth = '80%';
             enlargedImg.style.height = 'auto';
             enlargedImg.style.display = 'block';
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             caption.style.color = '#fff';
             caption.style.padding = '10px';
             caption.style.borderTop = '2px solid lightgray';
-            caption.style.maxWidth = '58.7%';
+            caption.style.maxWidth = '78%';
 
             //  Ajoute l'image et la légende au conteneur
             imageContainer.appendChild(enlargedImg);
