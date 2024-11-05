@@ -113,26 +113,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const carre = document.querySelector('.carre');
     const bouton = document.querySelector('.bouge');
 
-    //  Initialise un compteur pour suivre le nombre de clics
+    //  Initialise un compteur pour suivre le nombre de clics.
     let NbreClique = 0;
 
     bouton.addEventListener('click', () => {
         NbreClique++;
         switch (NbreClique) {
             case 1:
-                //  Premier clic : déplace le carré de 100px sur la droite
+                //  Premier clic : déplace le carré de 100px sur la droite.
                 carre.style.transform = 'translateX(100px)';
                 break;
             case 2:
-                //  Troisième clic : déplace le carré vers le haut de 100px
+                //  Troisième clic : déplace le carré vers le haut de 100px et rester aligner à droite.
                 carre.style.transform = 'translate(100px, -100px)';
                 break;
             case 3:
-                //  Quatrième clic : déplace le carré de 100px sur la gauche
+                //  Quatrième clic : déplace le carré de 100px sur la gauche et rester à la même hauteur.
                 carre.style.transform = 'translate(0px, -100px)';
                 break;
             default:
-                //  Réinitialise le compteur et remet le carré à sa position initiale
+                //  Réinitialise le compteur et remet le carré à sa position initiale.
                 NbreClique = 0;
                 carre.style.transform = 'translate(0px, 0px)';
                 break;
@@ -145,20 +145,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    //  Sélectionne l'élément                    .carreVert
+    //  Sélectionne l'élément                    class=carreVert
     const carreVert = document.querySelector('.carreVert');
     
     //  Initialise la position de déplacement
     let positionX = 0;
 
-    //  Ajoute un événement pour détecter le scroll de la souris
+    //  Ajoute un événement pour détecter le scroll de la souris.
     window.addEventListener('wheel', (deplacement) => {
-        //  Vérifie la direction du scroll
+        //  Vérifie la direction du scroll.
         if (deplacement.deltaY < 0) {
-            //  Scroll vers le haut : déplace vers la droite
+            //  Scroll vers le haut : déplace vers la droite.
             positionX += 40;
         } else if (deplacement.deltaY > 0) {
-            //  Scroll vers le bas : déplace vers la gauche
+            //  Scroll vers le bas : déplace vers la gauche.
             positionX -= 40;
         }
         
