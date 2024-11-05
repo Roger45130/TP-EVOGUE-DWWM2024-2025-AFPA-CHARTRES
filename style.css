@@ -1,0 +1,143 @@
+/* ****  Style Général  **** */
+
+@import url(../01-ENTRAINEMENT/CSS/reset.css);
+
+html, body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+.title__h1 {
+    font-size: 2rem;
+    color: lightcoral;
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.subtitle__h2 {
+    font-size: 1.5rem;
+    color: lightseagreen;
+    padding: 20px;
+    text-decoration-line: underline;
+}
+
+.title__h3 {
+    font-size: 16px;
+    color: gold;
+    padding: 0 30px;
+    text-decoration-line: underline;
+}
+
+/* ****  Exercie 1 : La Galerie  **** */
+
+.grid {
+    display: grid;
+    grid-template-columns: 80% auto;
+    gap: 10px;
+    margin: 10px;
+}
+
+img {
+    width: auto;
+    height: 100px;
+}
+
+/* ****  Exercie 2 : Copieur  **** */
+
+.copieur {
+    margin: 40px;
+}
+
+.texteOriginal {
+    width: 500px;
+    height: 20px;
+    margin-bottom: 20px;
+    border: 1px solid royalblue;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.texteCopie {
+    width: 500px;
+    height: 20px;
+    border: 1px solid royalblue;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}
+
+/* ****  Exercie 3 : tableau de calcul  **** */
+
+.choisirNombre {
+    margin: 40px;
+}
+
+.nombreChoisi {
+    height: 20px;
+    border: 1px solid royalblue;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.calcul {
+    width: 100%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.calcul th, .calcul td {
+    border: 2px solid royalblue;
+    padding: 10px;
+}
+
+.calcul td {
+    border-right: 2px solid royalblue;
+}
+
+.title__tab {
+    font-weight: bold;
+}
+
+/* ****  Exercie 4 : déplacement carré  **** */
+
+.exerciceDeplacement {
+    display: grid;
+    grid-template-columns: 80%;
+    padding: 0 200px;
+    height: 200px;
+}
+
+.carre {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: royalblue;
+    margin: 80px 40px;
+}
+
+.bouge {
+    padding: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 40px;
+    border: 1px solid #000;
+    background-color: royalblue;
+    border-radius: 20px;
+    color: #fff;
+}
+
+/* ****  Exercie 5 : déplacement carré avec le scroll de la souris  **** */
+
+.carreVert {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: green;
+    margin: 0 auto;
+}
