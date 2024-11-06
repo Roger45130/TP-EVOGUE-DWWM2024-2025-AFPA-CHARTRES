@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             caption.style.color = '#fff';
             caption.style.padding = '10px';
             caption.style.borderTop = '2px solid lightgray';
-            caption.style.maxWidth = '78%';
+            caption.style.maxWidth = '78.4%';
 
             //  Ajoute l'image et la légende au conteneur
             imageContainer.appendChild(enlargedImg);
