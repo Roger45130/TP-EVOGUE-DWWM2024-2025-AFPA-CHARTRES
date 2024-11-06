@@ -193,8 +193,10 @@ menu.addEventListener('click', (event) => {
     const sousMenu = menu.querySelector('.sous-menu');
     if (sousMenu.style.display === 'block') {
         sousMenu.style.display = 'none';
-        chevron.style.transform = 'rotate(0deg)'; // Réinitialiser la rotation de l'icône
+        // Réinitialiser la rotation de l'icône
+        chevron.style.transform = 'rotate(0deg)'; 
     } else {sousMenu.style.display = 'block';
+            // exécute la rotation de l'icône à 180°
             chevron.style.transform = 'rotate(180deg)';
     }
 });
