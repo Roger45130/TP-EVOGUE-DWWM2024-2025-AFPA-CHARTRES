@@ -147,3 +147,53 @@ img {
     background-color: green;
     margin: 0 auto;
 }
+
+/* ****  Exercie 6 : Créer un menu déroulant  **** */
+
+.menuDeroulant {
+    width: 200px;
+    margin: 0 auto;
+    background-color: royalblue;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.menuDeroulant ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuDeroulant ul li {
+    position: relative;
+}
+
+.menuDeroulant ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.sous-menu {
+    /* Caché par défaut */
+    display: none; 
+    position: absolute;
+    /* Positionnement en dessous de l'élément parent */
+    top: 75%; 
+    left: 0;
+    background-color: royalblue;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.sous-menu li a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sous-menu li a:hover {
+    background-color: rgb(98, 121, 192);
+}

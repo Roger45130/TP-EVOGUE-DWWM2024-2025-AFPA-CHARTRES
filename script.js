@@ -179,3 +179,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ajoute l'événement de défilement sur la fenêtre.
     window.addEventListener('wheel', deplacerCarre);
 });
+
+
+//  Exercice 6 : MENU DEROULANT :
+
+
+//  Sélectionner l'élément du menu principal
+const menu = document.querySelector('.menu');
+
+//  Ajouter un événement "mouseover" pour afficher le sous-menu
+menu.addEventListener('mouseover', () => {
+    const sousMenu = menu.querySelector('.sous-menu');
+    sousMenu.style.display = 'block';
+});
+
+//  Ajouter un événement "mouseout" pour masquer le sous-menu lorsque la souris quitte le survole de la zone menu
+menu.addEventListener('mouseout', () => {
+    const sousMenu = menu.querySelector('.sous-menu');
+    sousMenu.style.display = 'none';
+});
