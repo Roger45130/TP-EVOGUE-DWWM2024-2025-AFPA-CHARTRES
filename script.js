@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             //  Crée un élément de légende
             const caption = document.createElement('div');
-            caption.textContent = image.alt;
+            caption.innerHTML = image.alt;
             caption.style.position = 'absolute';
             caption.style.bottom = '0';
             caption.style.left = '0';
@@ -89,17 +89,17 @@ document.addEventListener('DOMContentLoaded', () => {
         //  Vérifie que la valeur entrée est un nombre valide (entier ou décimal)
         if (/^\d*\.?\d+$/.test(valeur)) {
             //  Copie la valeur dans la div copyNumber
-            copyNumber.textContent = valeur;
+            copyNumber.innerHTML = valeur;
 
             //  Calcule le carré et le cube du nombre et les affiche
             const nombre = parseFloat(valeur);
-            resultSquare.textContent = (nombre * nombre).toFixed(2);
-            resultCube.textContent = (nombre * nombre * nombre).toFixed(2);
+            resultSquare.innerHTML = (nombre * nombre).toFixed(2);
+            resultCube.innerHTML = (nombre * nombre * nombre).toFixed(2);
         } else {
             //  Efface les résultats si la valeur n'est pas valide
-            copyNumber.textContent = '';
-            resultSquare.textContent = '';
-            resultCube.textContent = '';
+            copyNumber.innerHTML = '';
+            resultSquare.innerHTML = '';
+            resultCube.innerHTML = '';
         }
     });
 });
