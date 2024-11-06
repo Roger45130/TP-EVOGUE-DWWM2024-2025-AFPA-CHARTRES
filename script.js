@@ -195,7 +195,7 @@ menu.addEventListener('click', (event) => {
         sousMenu.style.display = 'none';
         chevron.style.transform = 'rotate(0deg)'; // Réinitialiser la rotation de l'icône
     } else {sousMenu.style.display = 'block';
-        chevron.style.transform = 'rotate(180deg)';
+            chevron.style.transform = 'rotate(180deg)';
     }
 });
 
