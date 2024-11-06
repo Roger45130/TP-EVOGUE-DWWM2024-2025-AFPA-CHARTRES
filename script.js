@@ -186,14 +186,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //  Sélectionner l'élément du menu principal
 const menu = document.querySelector('.menu');
-
-//  Ajouter un événement "mouseover" pour afficher le sous-menu
-menu.addEventListener('mouseover', () => {
+const chevron = document.querySelector('.fa-chevron-down');
+//  Ajouter un événement "clique" pour afficher le sous-menu
+menu.addEventListener('click', (event) => {
+    event.preventDefault();
     const sousMenu = menu.querySelector('.sous-menu');
-    sousMenu.style.display = 'block';
+    if (sousMenu.style.display === 'block') {
+        sousMenu.style.display = 'none';
+        chevron.style.transform = 'rotate(0deg)'; // Réinitialiser la rotation de l'icône
+    } else {sousMenu.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+    }
 });
 
-//  Ajouter un événement "mouseout" pour masquer le sous-menu lorsque la souris quitte le survole de la zone menu
+//  Ajouter un événement "mouseout" pour masquer le sous-menu lorsque la souris quitte la zone menu
 menu.addEventListener('mouseout', () => {
     const sousMenu = menu.querySelector('.sous-menu');
     sousMenu.style.display = 'none';
