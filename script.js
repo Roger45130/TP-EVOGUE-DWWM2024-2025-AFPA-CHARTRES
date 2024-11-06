@@ -200,9 +200,3 @@ menu.addEventListener('click', (event) => {
             chevron.style.transform = 'rotate(180deg)';
     }
 });
-
-//  Ajouter un événement "mouseout" pour masquer le sous-menu lorsque la souris quitte la zone menu
-menu.addEventListener('mouseout', () => {
-    const sousMenu = menu.querySelector('.sous-menu');
-    sousMenu.style.display = 'none';
-});
